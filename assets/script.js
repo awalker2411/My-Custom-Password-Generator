@@ -6,6 +6,74 @@ const upperLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O
 const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", ";", ":", "'", ",", "<", ".", ">", "?", "`", "~"];
 
 
+function generatePassword() { 
+  const userCharSet = [];
+  let randomPassword = "";
+
+  let input = prompt("Number of characters desired for password:");
+  let numberOfChar = parseInt(input);
+
+  if (isNaN(numberOfChar) || numberOfChar < 8 || numberOfChar > 128) {
+    window.alert("Please enter valid number between 8 and 128.")
+    generatePassword();
+  } else {
+    console.log(numberOfChar);
+  }
+
+  let inputSecond = confirm("Include numbers in your password?");
+  let charNumber = inputSecond 
+
+  if (charNumber == true) {
+    Array.prototype.push.apply(userCharSet, numbers);
+    console.log(userCharSet);
+  }
+  
+  let inputThird = confirm("Include lowercase letters in your password?");
+  let charLower = inputThird 
+
+  if (charLower == true) {
+    Array.prototype.push.apply(userCharSet, lowerLetters);
+    console.log(userCharSet);
+  }
+
+  let inputFourth = confirm("Include uppercase letters in your password?");
+  let charUpper = inputFourth 
+
+  if (charUpper == true) {
+    Array.prototype.push.apply(userCharSet, upperLetters);
+    console.log(userCharSet);
+  }
+
+  let inputFifth = confirm("Include symbols in your password?");
+  let charSymbols = inputFifth 
+
+  if (charSymbols == true) {
+    Array.prototype.push.apply(userCharSet, symbols);
+    console.log(userCharSet);
+  }
+
+  for(let i = 0; i < numberOfChar; i++) {
+    const randomIndex = Math.floor(Math.random() * userCharSet.length);
+    randomPassword += userCharSet[randomIndex];
+  }
+
+  console.log(randomPassword);
+  return randomPassword;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
