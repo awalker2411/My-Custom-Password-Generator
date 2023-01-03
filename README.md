@@ -23,3 +23,11 @@ This application will allow users to generate a random password based off of pro
 <br>THEN a password is generated that matches the selected criteria
 <br>WHEN the password is generated
 <br>THEN the password is either displayed in an alert or written to the page
+
+GitHub Repository Link: https://github.com/awalker2411/My-Custom-Password-Generator
+
+Live URL
+
+Thank you!
+
+MIT License
