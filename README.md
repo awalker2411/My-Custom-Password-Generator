@@ -26,7 +26,7 @@ This application will allow users to generate a random password based off of pro
 
 GitHub Repository Link: https://github.com/awalker2411/My-Custom-Password-Generator
 
-Live URL
+Live URL: https://awalker2411.github.io/My-Custom-Password-Generator/
 
 Thank you!
 
