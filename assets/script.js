@@ -52,6 +52,11 @@ function generatePassword() {
     console.log(userCharSet);
   }
 
+  if (charNumber == false && charLower == false && charUpper == false && charSymbols == false){
+    window.alert("Please select at least one available character criteria.")
+    generatePassword();
+  }
+
   for(let i = 0; i < numberOfChar; i++) {
     const randomIndex = Math.floor(Math.random() * userCharSet.length);
     randomPassword += userCharSet[randomIndex];
